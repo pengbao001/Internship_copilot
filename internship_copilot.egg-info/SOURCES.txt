@@ -1,0 +1,8 @@
+pyproject.toml
+app/main.py
+app/core/config.py
+internship_copilot.egg-info/PKG-INFO
+internship_copilot.egg-info/SOURCES.txt
+internship_copilot.egg-info/dependency_links.txt
+internship_copilot.egg-info/requires.txt
+internship_copilot.egg-info/top_level.txt

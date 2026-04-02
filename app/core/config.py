@@ -9,6 +9,9 @@ class Settings(BaseSettings):
     environment: Literal["development", "test", "production"] = "development"
     debug: bool = True # Need to modify after finish.
 
+    database_url: str = "sqlite:///./internship_copilot.db"
+    database_echo: bool = False
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",

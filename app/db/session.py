@@ -19,7 +19,7 @@ SessionFactory = sessionmaker(
 )
 
 def get_db_session() -> Generator[Session, None, None]:
-    session = SessionFactory
+    session = SessionFactory()
     try:
         yield session
     finally:

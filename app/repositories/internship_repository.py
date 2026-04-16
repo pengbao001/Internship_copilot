@@ -53,3 +53,12 @@ class InternshipRepository:
 
         interns = interns.limit(limit).offset(offset)
         return list(self.session.scalars(interns).all())
+
+    def list_all(self, *,
+                 only_active: bool | None = None) -> list[Internship]:
+
+        interns = select(Internship).order_by(Internship.created_at.desc())
+
+        if only_active is not None:
+            interns = interns.where(Internship.is_active == only_active)
+        return list(self.session.scalars(interns).all())
